@@ -1,0 +1,27 @@
+{
+  "name": "coursewiki-server",
+  "version": "0.1.0",
+  "description": "This project is designed to serve as an wiki which provides the basic information for courses offered in the University of Toronto.",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UT-Application-Development-Association/CourseWiki.git"
+  },
+  "keywords": [
+    "react",
+    "express",
+    "git",
+    "wiki"
+  ],
+  "author": "UTADA",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/UT-Application-Development-Association/CourseWiki/issues"
+  },
+  "homepage": "https://github.com/UT-Application-Development-Association/CourseWiki#readme"
+
+}
