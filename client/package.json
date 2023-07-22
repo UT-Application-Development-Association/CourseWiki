@@ -1,0 +1,54 @@
+{
+  "name": "coursewiki-client",
+  "version": "0.1.0",
+  "description": "This project is designed to serve as an wiki which provides the basic information for courses offered in the University of Toronto.",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UT-Application-Development-Association/CourseWiki.git"
+  },
+  "keywords": [
+    "react",
+    "express",
+    "git",
+    "wiki"
+  ],
+  "author": "UTADA",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/UT-Application-Development-Association/CourseWiki/issues"
+  },
+  "homepage": "https://github.com/UT-Application-Development-Association/CourseWiki#readme"
+}
