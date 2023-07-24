@@ -1,5 +1,5 @@
 export default function Editor() {
   return (
-    "this is the editor page"
+    'this is the editor page'
   );
 }
