@@ -20,7 +20,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "format": "npx eslint . --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -56,6 +57,9 @@
     "url": "https://github.com/UT-Application-Development-Association/CourseWiki/issues"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "eslint": "^8.45.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.33.0"
   }
 }

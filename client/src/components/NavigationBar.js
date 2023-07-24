@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -24,29 +24,29 @@ export default function NavigationBar(props) {
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{display: 'flex'}}>
       <CssBaseline />
       <AppBar
         component='nav'
         sx={{
-          minHeight: { xs: 260, sm: 420 },
+          minHeight: {xs: 260, sm: 420},
           backgroundImage: 'url(/navigation-background.jpg)',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center'
+          backgroundPosition: 'center',
         }}
       >
         <Toolbar>
           <Typography
             variant='h6'
             component='div'
-            sx={{ flexGrow: 1, fontWeight: 'bold' }}
+            sx={{flexGrow: 1, fontWeight: 'bold'}}
           >
             Course Wiki
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box sx={{display: {xs: 'none', sm: 'block'}}}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }} onClick={() => {
+              <Button key={item} sx={{color: '#fff'}} onClick={() => {
                 navigate(`/${item.toLowerCase()}`);
               }}>
                 {item}
@@ -61,7 +61,7 @@ export default function NavigationBar(props) {
               handleMenuToggle();
               setAnchorEl(event.currentTarget);
             }}
-            sx={{ display: { sm: 'none' } }}
+            sx={{display: {sm: 'none'}}}
           >
             <MenuIcon />
           </IconButton>
@@ -91,14 +91,14 @@ export default function NavigationBar(props) {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            minHeight: { xs: 180, sm: 300 }
+            minHeight: {xs: 180, sm: 300},
           }}
         >
           <Typography
             variant='h1'
             sx={{
               fontWeight: 'bold',
-              fontSize: { xs: 'h3.fontSize', sm: 80 }
+              fontSize: {xs: 'h3.fontSize', sm: 80},
             }}
           >
             Course Wiki
@@ -108,18 +108,18 @@ export default function NavigationBar(props) {
             align='center'
             sx={{
               fontWeight: 'light',
-              paddingLeft: { xs: 3, sm: 0 },
-              paddingRight: { xs: 3, sm: 0 },
-              fontSize: { xs: 'body1.fontSize', sm: 'h6.fontSize' }
+              paddingLeft: {xs: 3, sm: 0},
+              paddingRight: {xs: 3, sm: 0},
+              fontSize: {xs: 'body1.fontSize', sm: 'h6.fontSize'},
             }}
           >
             Knowledge is the cheapest and most rewarding investment
           </Typography>
         </Box>
       </AppBar>
-      <Box component='main' sx={{ p: 3 }}>
+      <Box component='main' sx={{p: 3}}>
         <Toolbar sx={{
-          minHeight: { xs: 260, sm: 420 },
+          minHeight: {xs: 260, sm: 420},
         }}/>
         {props.children}
       </Box>
