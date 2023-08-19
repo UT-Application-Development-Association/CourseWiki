@@ -29,32 +29,43 @@ export default function NavigationBar(props) {
       <AppBar
         component='nav'
         sx={{
-          minHeight: {xs: 260, sm: 420},
-          backgroundImage: 'url(/navigation-background.jpg)',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
+          backgroundColor: '#fff',
+          boxShadow: 0,
         }}
       >
-        <Toolbar>
+        <Toolbar
+          sx={{
+            maxWidth: 920,
+            alignSelf: 'center',
+            width: '90%',
+          }}
+        >
           <Typography
-            variant='h6'
+            variant='h5'
             component='div'
-            sx={{flexGrow: 1, fontWeight: 'bold'}}
+            sx={{
+              color: '#000', flexGrow: 1,
+              fontSize: 28, fontWeight: 'bolder',
+            }}
           >
             Course Wiki
           </Typography>
           <Box sx={{display: {xs: 'none', sm: 'block'}}}>
             {navItems.map((item) => (
-              <Button key={item} sx={{color: '#fff'}} onClick={() => {
-                navigate(`/${item.toLowerCase()}`);
-              }}>
+              <Button key={item}
+                sx={{
+                  color: '#000', fontSize: 20,
+                  textTransform: 'none',
+                }}
+                onClick={() => {
+                  navigate(`/${item.toLowerCase()}`);
+                }}>
                 {item}
               </Button>
             ))}
           </Box>
           <IconButton
-            color='inherit'
+            color='#000'
             aria-label='open drawer'
             edge='start'
             onClick={(event) => {
@@ -85,42 +96,9 @@ export default function NavigationBar(props) {
             ))}
           </Menu>
         </Toolbar>
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            minHeight: {xs: 180, sm: 300},
-          }}
-        >
-          <Typography
-            variant='h1'
-            sx={{
-              fontWeight: 'bold',
-              fontSize: {xs: 'h3.fontSize', sm: 80},
-            }}
-          >
-            Course Wiki
-          </Typography>
-          <Typography
-            variant='body1'
-            align='center'
-            sx={{
-              fontWeight: 'light',
-              paddingLeft: {xs: 3, sm: 0},
-              paddingRight: {xs: 3, sm: 0},
-              fontSize: {xs: 'body1.fontSize', sm: 'h6.fontSize'},
-            }}
-          >
-            Knowledge is the cheapest and most rewarding investment
-          </Typography>
-        </Box>
       </AppBar>
-      <Box component='main' sx={{p: 3}}>
-        <Toolbar sx={{
-          minHeight: {xs: 260, sm: 420},
-        }}/>
+      <Box component='main' sx={{p: 3, width: '100%'}}>
+        <Toolbar />
         {props.children}
       </Box>
     </Box>
